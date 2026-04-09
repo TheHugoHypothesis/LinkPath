@@ -2,7 +2,7 @@
 title: "Lógica de Descrição"
 group: "Lógica"
 links: ["logica1", "logica3", "onto1", "websem2"]
-video_url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+video_url: ""
 icon: "📐"
 order: 2
 id: "logica2"

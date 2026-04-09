@@ -2,7 +2,7 @@
 title: "Web Semântica"
 group: "Web Semântica"
 links: ["websem2", "onto1", "logica2"]
-video_url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+video_url: ""
 icon: "🌐"
 order: 1
 id: "websem1"

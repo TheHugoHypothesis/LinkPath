@@ -2,7 +2,7 @@
 title: "Representação de Conhecimento"
 group: "Inteligência Artificial"
 links: ["onto1", "onto2", "logica3", "websem1"]
-video_url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+video_url: ""
 icon: "🧠"
 order: 1
 id: "ia1"

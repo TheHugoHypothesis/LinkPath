@@ -2,7 +2,7 @@
 title: "RDF e OWL"
 group: "Web Semântica"
 links: ["websem1", "onto1", "onto2", "logica2"]
-video_url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+video_url: ""
 icon: "🔗"
 order: 2
 id: "websem2"

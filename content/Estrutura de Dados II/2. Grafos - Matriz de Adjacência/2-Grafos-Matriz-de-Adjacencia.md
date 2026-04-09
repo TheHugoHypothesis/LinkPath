@@ -2,7 +2,7 @@
 title: "Grafos: Matriz de Adjacência"
 group: "AED II"
 links: ["grafos-conceitos-basicos"]
-video_url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+video_url: ""
 icon: "🔢"
 order: 2
 ---

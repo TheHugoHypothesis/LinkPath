@@ -2,7 +2,7 @@
 title: "Introdução à Lógica"
 group: "Lógica"
 links: ["logica2", "logica3"]
-video_url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+video_url: ""
 icon: "🧮"
 order: 1
 id: "logica1"

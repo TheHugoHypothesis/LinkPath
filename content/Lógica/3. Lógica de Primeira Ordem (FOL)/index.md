@@ -2,7 +2,7 @@
 title: "Lógica de Primeira Ordem"
 group: "Lógica"
 links: ["logica1", "logica2", "ia1"]
-video_url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+video_url: ""
 icon: "∀"
 order: 3
 id: "logica3"

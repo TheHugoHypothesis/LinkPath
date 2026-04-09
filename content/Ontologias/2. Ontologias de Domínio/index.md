@@ -2,7 +2,7 @@
 title: "Ontologias de Domínio"
 group: "Ontologias"
 links: ["onto1", "websem2", "ia1"]
-video_url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+video_url: ""
 icon: "🔬"
 order: 2
 id: "onto2"

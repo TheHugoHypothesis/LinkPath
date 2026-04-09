@@ -2,7 +2,7 @@
 title: "Introdução a Ontologias — BFO"
 group: "Ontologias"
 links: ["onto2", "logica2", "websem2"]
-video_url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+video_url: ""
 icon: "🏛️"
 order: 1
 id: "onto1"
