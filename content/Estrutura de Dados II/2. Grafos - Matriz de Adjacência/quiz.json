@@ -1,0 +1,70 @@
+[
+  {
+    "question": "Analise a função de inicialização abaixo. Em um sistema 64-bits (ponteiros = 8 bytes) e tipo bool (1 byte), qual o overhead total de memória (stack + heap) para instanciar um grafo de 100 vértices?",
+    "code": "bool inicializaGrafo(Grafo * G, int vertices) {\n  G->matriz = (bool **) malloc(sizeof(bool *) * vertices);\n  for (int i = 0; i < vertices; i++) {\n    G->matriz[i] = (bool *) malloc(sizeof(bool) * vertices);\n  }\n}",
+    "code_language": "C",
+    "options": [
+      "10.000 bytes",
+      "10.800 bytes",
+      "800 bytes",
+      "10.812 bytes"
+    ],
+    "answer": 3,
+    "explanation": "No Heap: 100 ponteiros (800 bytes) + 10.000 bools (10.000 bytes). No Stack: 2 ints (8 bytes) e 1 ponteiro duplo (8 bytes) dentro da struct Grafo, totalizando 10.812 bytes aproximados.",
+    "level": "Difícil"
+  },
+  {
+    "question": "Se um aluno remover a trava de autolaço na função 'insereAresta', qual será o comportamento da função 'grauVertice' ao encontrar um valor 'true' na diagonal principal (G->matriz[i][i])?",
+    "code": "int grauVertice(Grafo * G, int v) {\n  int grau = 0;\n  for (int x = 0; x < G->numVertices; x++)\n    if (G->matriz[v][x]) grau++;\n  return grau;\n}",
+    "code_language": "C",
+    "options": [
+      "Retornará o grau correto conforme a teoria de grafos não-dirigidos.",
+      "Retornará um valor subestimado, pois autolaços devem somar 2 ao grau.",
+      "Causará um erro de 'Index Out of Bounds'.",
+      "Retornará um valor superestimado, pois autolaços não possuem grau."
+    ],
+    "answer": 1,
+    "explanation": "Pela definição em grafos não-dirigidos, um autolaço conta como 2 arestas incidindo no vértice. Como a função faz apenas 'grau++', ela contará o autolaço como 1, errando o cálculo matemático.",
+    "level": "Complexo"
+  },
+  {
+    "question": "Qual a complexidade assintótica para calcular a soma dos graus de TODOS os vértices de um grafo utilizando a implementação de matriz de adjacência fornecida?",
+    "options": [
+      "O(V)",
+      "O(V + E)",
+      "O(V²)",
+      "O(E²)"
+    ],
+    "answer": 2,
+    "explanation": "Para cada um dos V vértices, a função grauVertice percorre V colunas. Portanto, V * V = O(V²).",
+    "level": "Médio"
+  },
+  {
+    "question": "Considere a função de remoção abaixo. O que acontece se chamarmos 'removeAresta(G, 2, 3)' em um grafo onde essa aresta NÃO existe?",
+    "code": "bool removeAresta(Grafo * G, int v1, int v2) {\n  if (G->matriz[v1][v2] == false) return false;\n  G->matriz[v1][v2] = false;\n  G->matriz[v2][v1] = false;\n  G->numArestas--;\n  return true;\n}",
+    "code_language": "C",
+    "options": [
+      "O programa trava (Crash).",
+      "O contador 'numArestas' ficará negativo, corrompendo a integridade do dado.",
+      "A função apenas retorna 'false' e o estado do grafo permanece íntegro.",
+      "A matriz é limpa completamente."
+    ],
+    "answer": 2,
+    "explanation": "A verificação inicial 'if (G->matriz[v1][v2] == false) return false;' impede que o decremento do contador ocorra sem uma aresta real, protegendo a integridade de 'numArestas'.",
+    "level": "Médio"
+  },
+  {
+    "question": "Em uma prova, pede-se para liberar a memória de um Grafo G. Qual o erro fatal no código abaixo?",
+    "code": "void liberaGrafo(Grafo * G) {\n  free(G->matriz);\n  for (int i = 0; i < G->numVertices; i++) {\n    free(G->matriz[i]);\n  }\n}",
+    "code_language": "C",
+    "options": [
+      "Não há erro, o código é eficiente.",
+      "Uso de 'Dangling Pointer': após free(G->matriz), o acesso a G->matriz[i] é inválido.",
+      "Erro de sintaxe no laço for.",
+      "O número de arestas não foi zerado antes."
+    ],
+    "answer": 1,
+    "explanation": "Ao liberar 'G->matriz' primeiro, você perde o acesso ao array que contém os endereços das linhas. O loop subsequente tentará acessar memória já liberada, resultando em comportamento indefinido ou Segmentation Fault.",
+    "level": "Difícil"
+  }
+]

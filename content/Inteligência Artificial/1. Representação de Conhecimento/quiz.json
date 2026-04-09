@@ -1,0 +1,24 @@
+[
+  {
+    "question": "O que caracteriza a Representação de Conhecimento na IA?",
+    "options": [
+      "Apenas o armazenamento de dados brutos em bancos SQL.",
+      "A formalização de informações para que um sistema computacional possa resolver tarefas complexas.",
+      "O uso exclusivo de redes neurais profundas sem símbolos.",
+      "A tradução direta de linguagens naturais para binário sem semântica."
+    ],
+    "answer": 1,
+    "explanation": "A RC foca em como formalizar o conhecimento para que máquinas possam raciocinar sobre ele, não apenas armazenar dados."
+  },
+  {
+    "question": "Qual dos itens abaixo é um exemplo clássico de formalismo de RC?",
+    "options": [
+      "Lógica de Primeira Ordem",
+      "Planilhas de Excel",
+      "Comentários no código-fonte",
+      "Formatos de compressão de imagem (JPEG)"
+    ],
+    "answer": 0,
+    "explanation": "Lógicas (como FOL e DL) são os pilares da representação de conhecimento formal."
+  }
+]
